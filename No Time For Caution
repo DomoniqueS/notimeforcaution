@@ -1,0 +1,121 @@
+use_bpm 50
+use_synth:piano
+bass = [:e4,:c4]
+bass2 = [:e4,:d4]
+bass3 = [:e4,:f4,:g4,:f4,:e4,:g4]
+bass4 = [:f4,:e4,:d4,:e4,:f4,:d4]
+bass5 = [:f4,:b3,:f4,:g4,:f4,:b4]
+slept =[0.25,0.25]
+pause =[0.25,0.25,0.25,0.25,0.25,0.25]
+index = 0
+x=48
+y=52
+z=55
+a=55
+5.times do
+  sample :misc_cineboom, rate: (rrand 0.125, 1.5)
+  sleep rrand(0.2, 2)
+end
+live_loop :interstellar do
+  sleep 7.5
+  play :a3, amp:1, decay:1
+  play :a4, amp:1, decay:1
+  sleep 2
+  play :b4, amp:1
+  play :b3, amp:1
+  sleep 2
+  play :a3, amp:1
+  play :a4, amp:1
+  sleep 0.5
+  play :a3, amp:1
+  play :a4, amp:1
+  sleep 0.5
+  play :b3, amp:1
+  play :b4, amp:1
+  sleep 0.5
+  play :c4, amp:1
+  play :c5, amp:1
+  sleep 0.5
+  play :b3, amp:1
+  play :b4, amp:1
+  sleep 0.5
+  play :a3, amp:1
+  play :a4, amp:1
+  sleep 0.5
+  play :b3, amp:1
+  play :b4, amp:1
+  sleep 0.5
+  play :c4, amp:1, decay:1
+  play :c5, amp:1, decay:1
+  sleep 2
+  play :b3, amp:1
+  play :b4, amp:1
+  sleep 100
+end
+18.times do
+  2.times do
+    play bass[index]
+    sleep slept[index]
+    index=index+1
+  end
+  index=0
+end
+
+18.times do
+  2.times do
+    play bass2[index]
+    sleep slept[index]
+    index=index+1
+  end
+  index=0
+end
+6.times do
+  play x,amp:3
+  play y,amp:3
+  play z,amp:3
+  sleep 0.5
+  play a,amp:3,decay:1
+  sleep 1
+  x=x+6
+  y=y+6
+  z=z+6
+  a=a+6
+  sleep 1
+end
+use_synth:hollow
+6.times do
+  play bass3[index]
+  sleep pause[index]
+  index=index+1
+end
+index=0
+6.times do
+  play bass4[index]
+  sleep pause[index]
+  index=index+1
+end
+index=0
+6.times do
+  play bass3[index]
+  sleep pause[index]
+  index=index+1
+end
+index=0
+6.times do
+  play bass5[index]
+  sleep pause[index]
+  index=index+1
+end
+index=0
+6.times do
+  play bass3[index]
+  sleep pause[index]
+  index=index+1
+end
+index=0
+6.times do
+  play bass5[index]
+  sleep pause[index]
+  index=index+1
+end
+index=0
