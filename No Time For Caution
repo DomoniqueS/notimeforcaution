@@ -22,7 +22,7 @@ a=55
   sleep rrand(0.2, 2)
 end
 #This is the main theme
-live_loop :interstellar do
+define :interstellar do
   sleep 7.5
   play :a3, amp:1, decay:1
   play :a4, amp:1, decay:1
@@ -57,6 +57,9 @@ live_loop :interstellar do
   play :b3, amp:1
   play :b4, amp:1
   sleep 100000
+end
+live_loop :begin do
+  interstellar
 end
 #There is no other way to get the code above to play conncurrently with the cold below and have it end so i made it sleep forever.
 18.times do
