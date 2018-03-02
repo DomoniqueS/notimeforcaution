@@ -1,4 +1,6 @@
-
+#Interstellar Theme https://musescore.com/user/1383926/scores/592501
+#No time for Caution https://musescore.com/novoprojects/no-time-for-caution
+#By Hans Zimmer
 use_bpm 50
 use_synth:piano
 bass = [:e4,:c4]
@@ -19,7 +21,7 @@ a=55
   sample :misc_cineboom, rate: (rrand 0.125, 1.5)
   sleep rrand(0.2, 2)
 end
-#This is the main theme 
+#This is the main theme
 live_loop :interstellar do
   sleep 7.5
   play :a3, amp:1, decay:1
