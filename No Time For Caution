@@ -23,6 +23,7 @@ a=55
 end
 #This is the main theme
 define :interstellar do |a,b,c,d,e,f,g,h|
+live_loop :interstellar do
   sleep 7.5
   play a, amp:1, decay:1
   play b, amp:1, decay:1
@@ -57,6 +58,7 @@ define :interstellar do |a,b,c,d,e,f,g,h|
   play c, amp:1
   play d, amp:1
   sleep 100000
+  end
 end
 interstellar :a3,:a4,:b3,:b4,:c3,:c4,0.5,2
 #There is no other way to get the code above to play conncurrently with the cold below and have it end so i made it sleep forever.
